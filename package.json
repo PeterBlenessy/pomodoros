@@ -6,6 +6,7 @@
   "author": "Peter Blenessy",
   "license": "MIT",
   "devDependencies": {
+    "ava": "^3.8.2",
     "electron": "^8.3.0",
     "electron-builder": "^22.6.1",
     "electron-builder-notarize": "^1.1.2",
@@ -13,6 +14,8 @@
   },
   "scripts": {
     "start": "yarn && electron .",
+    "test": "ava",
+    "test:watch": "ava --watch",
     "build": "yarn && electron-builder --dir",
     "build:macos": "electron-builder --macos --dir",
     "dist:all": "yarn && electron-builder -mlw --publish never",

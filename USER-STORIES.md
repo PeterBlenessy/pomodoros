@@ -15,7 +15,7 @@
 
 - [ ] As a developer, I want an automated CI/CD pipeline, so that I can easily
   - [x] Build
-  - [ ] Test
+  - [x] Test
   - [x] Sign
   - [x] Notarize (for Mac)
   - [x] Package (in a distributable format)

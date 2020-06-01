@@ -39,6 +39,9 @@ yarn add nucleus-nodejs
 # Install node-keytar, a native Node module to get, add, replace, and delete passwords in system's keychain
 # yarn add node-keytar
 
+# Install AVA, a minimalistic test runner for Node.js
+yarn add ava --dev
+
 # We run yarn audit to check that there are no security issues
 yarn audit
 
