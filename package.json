@@ -13,7 +13,6 @@
   },
   "scripts": {
     "start": "yarn && electron .",
-    "test": "",
     "build": "yarn && electron-builder --dir",
     "build:macos": "electron-builder --macos --dir",
     "dist:all": "yarn && electron-builder -mlw --publish never",
