@@ -1,6 +1,6 @@
 {
   "name": "pomodoros",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Yet another Pomodoro timer application for your Mac, Windows and Linux, based on Electron.",
   "main": "main.js",
   "author": "Peter Blenessy",
@@ -25,7 +25,7 @@
   },
   "build": {
     "productName": "Pomodoros",
-    "appId": "com.addable.${name}",
+    "appId": "com.addable.pomodoros",
     "directories": {
       "buildResources": "resources"
     },
