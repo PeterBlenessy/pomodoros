@@ -26,9 +26,6 @@
   "build": {
     "productName": "Pomodoros",
     "appId": "com.addable.pomodoros",
-    "directories": {
-      "buildResources": "resources"
-    },
     "mac": {
       "artifactName": "${productName}-${version}-osx.${ext}",
       "category": "public.app-category.productivity",
