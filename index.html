@@ -5,15 +5,21 @@
     <!-- https://developer.mozilla.org/en-US/docs/Web/HTTP/CSP -->
     <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'">
     <meta http-equiv="X-Content-Security-Policy" content="default-src 'self'; script-src 'self'">
-    <title>Hello World!</title>
+    <title>Pomodoros</title>
   </head>
   <body>
-    <h1>Hello World!</h1>
-    We are using Node.js <span id="node-version"></span>,
-    Chromium <span id="chrome-version"></span>,
-    and Electron <span id="electron-version"></span>.
+    <div class="app">
+      <div class="app-header">
+
+      </div>
+      <div class="app-content">
+        <h1>Welcome to Pomodoros!</h1>
+        The <a href="https://francescocirillo.com/pages/pomodoro-technique">Pomodoro Technique</a> is a time management method developed by Francesco Cirillo in the late 1980s.
+
+      </div>
+    </div>
 
     <!-- You can also require other files to run in this process -->
-    <script src="./renderer.js"></script>
+    <script src="./renderer/renderer.js"></script>
   </body>
 </html>

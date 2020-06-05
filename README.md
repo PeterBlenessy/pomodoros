@@ -1,7 +1,7 @@
 
 # Pomodoros
 
-Yet another Pomodoro timer application for your Mac, Windows and Linux, based on Electron
+Yet another Pomodoro timer application for your Mac, Windows and Linux, based on Electron.
 
 ## Initial setup
 
@@ -40,6 +40,7 @@ yarn add nucleus-nodejs
 # yarn add node-keytar
 
 # Install AVA, a minimalistic test runner for Node.js
+# Use the --watch flag to use it in watch mode
 yarn add ava --dev
 
 # We run yarn audit to check that there are no security issues

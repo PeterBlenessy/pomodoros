@@ -1,6 +1,6 @@
 {
   "name": "pomodoros",
-  "version": "0.1.2",
+  "version": "0.1.3",
   "description": "Yet another Pomodoro timer application for your Mac, Windows and Linux, based on Electron.",
   "main": "main.js",
   "author": "Peter Blenessy",

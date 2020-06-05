@@ -1,28 +1,44 @@
 // Modules to control application life and create native browser window
 const { app, BrowserWindow, Menu } = require('electron');
 const { autoUpdater } = require('electron-updater');
-const path = require('path');
 
 const { createTray } = require('./main/tray.js');
 const { analytics } = require('./main/analytics.js');
 const store = require('./main/settings.js');
 
+let mainWindow = null;
 
+const isMac = process.platform === 'darwin';
+
+// Template for the application menu
+const appMenuTemplate = [
+  { role: 'appMenu' },
+  { role: 'viewMenu'},
+  { role: 'windowMenu'},
+  { role: 'help'}
+];
+const appMenu = Menu.buildFromTemplate(appMenuTemplate);
+
+// This function creates and configures the application's browser window
 function createWindow () {
   // Create the browser window.
-  const mainWindow = new BrowserWindow({
-    width: 800,
-    height: 600,
+  mainWindow = new BrowserWindow({
+    width: 600,
+    height: 300,
+    resizable: false,
+    maximizable: false,
+    fullscreenable: false,
+    title: "Pomodoros",
+    center: true,
+    show: true,
+  
     webPreferences: {
-      preload: path.join(__dirname, 'preload.js')
+      nodeIntegration: true
     }
   });
- 
+
   // and load the index.html of the app.
   mainWindow.loadFile('./index.html');
-
-  // Open the DevTools.
-  // mainWindow.webContents.openDevTools();
 
   // Check for updates 
   autoUpdater.checkForUpdatesAndNotify();
@@ -37,7 +53,8 @@ function createWindow () {
 app.whenReady().then(() => {
   createTray();
   createWindow();
-  
+  Menu.setApplicationMenu(appMenu);
+
   app.on('activate', function () {
     // On macOS it's common to re-create a window in the app when the
     // dock icon is clicked and there are no other windows open.
@@ -45,6 +62,7 @@ app.whenReady().then(() => {
   });
 });
 
+// Start the application when logging in, if set by user
 app.setLoginItemSettings({
   openAtLogin: store.get('launchAtStart'),
 });
