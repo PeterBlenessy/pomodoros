@@ -7,7 +7,7 @@ Yet another Pomodoro timer application for your Mac, Windows and Linux, based on
 
 ```bash
 # Create folder for our application project and initiate it for development
-mkdir pomodoro && cd pomodoro
+mkdir pomodoros && cd pomodoros
 yarn init
 
 # Create folders and (empty) files for the application

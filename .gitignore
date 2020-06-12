@@ -22,7 +22,6 @@ yarn-error.log*
 /coverage
 
 # production
-/build
 /dist
 
 # misc

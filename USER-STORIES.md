@@ -21,6 +21,10 @@
 - [x] As a developer, I want to collect application usage statistics, so that I can make decisions based on data.
 - [ ] As a developer, I want the application to reload whenever I change the code or content, so I can work in a continuous manner.
 
+- [ ] Add build configuration for Windows and Linux.
+- [ ] Create application icons and logos in proper format for all platforms.
+- [ ] Configure [channels](https://www.electron.build/tutorials/release-using-channels.html) to allow users to receive alpha, beta or release builds via [autoupdate] (https://github.com/electron-userland/electron-builder/issues/1182#issuecomment-324947139)
+
 ## End user focused stories
 
 ### System tray

@@ -32,7 +32,7 @@ const contextMenuTemplate = [
 
 // This method creates a the system tray icon and context menu for the application
 function createTray() {
-  tray = new Tray(path.join(__dirname, "../resources/logo-16.png"));
+  tray = new Tray(path.join(__dirname, '../build/tray-16.png'));
   
   tray.setToolTip('Yet another Pomodoro application');
   tray.setContextMenu(Menu.buildFromTemplate(contextMenuTemplate));

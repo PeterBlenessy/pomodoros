@@ -1,17 +1,16 @@
 {
   "name": "pomodoros",
-  "version": "0.1.3",
+  "version": "0.1.4",
   "description": "Yet another Pomodoro timer application for your Mac, Windows and Linux, based on Electron.",
-  "main": "main.js",
-  "author": "Peter Blenessy",
   "license": "MIT",
-  "devDependencies": {
-    "ava": "^3.8.2",
-    "electron": "^8.3.0",
-    "electron-builder": "^22.6.1",
-    "electron-builder-notarize": "^1.1.2",
-    "electron-notarize": "^0.3.0"
+  "author": {
+    "email": "peter.blenessy@gmail.com",
+    "name": "Peter Blenessy",
+    "url": "https://github.com/peterblenessy"
   },
+  "repository": "github:peterblenessy/pomodoros",
+  "homepage": "https://github.com/peterblenessy/pomodoros",
+  "main": "main.js",
   "scripts": {
     "start": "yarn && electron .",
     "test": "ava",
@@ -26,18 +25,39 @@
   "build": {
     "productName": "Pomodoros",
     "appId": "com.addable.pomodoros",
+    "files": [
+      "**/*",
+      "build/tray-16.png"
+    ],
     "mac": {
-      "artifactName": "${productName}-${version}-osx.${ext}",
+      "artifactName": "${productName}-${version}-macos.${ext}",
       "category": "public.app-category.productivity",
       "minimumSystemVersion": "10.15.0",
       "hardenedRuntime": true,
       "gatekeeperAssess": false,
       "darkModeSupport": true,
-      "entitlements": "./build/entitlements.mac.inherit.plist",
-      "entitlementsInherit": "./build/entitlements.mac.inherit.plist",
+      "entitlements": "./build/mac/entitlements.mac.inherit.plist",
+      "entitlementsInherit": "./build/mac/entitlements.mac.inherit.plist",
       "target": [
         "zip",
         "dmg"
+      ],
+      "icon": "./build/mac/logo-512.png"
+    },
+    "dmg": {
+      "background": "./build/mac/background.png",
+      "iconSize": 160,
+      "contents": [
+        {
+          "x": 180,
+          "y": 200
+        },
+        {
+          "x": 480,
+          "y": 200,
+          "type": "link",
+          "path": "/Applications"
+        }
       ]
     },
     "afterSign": "electron-builder-notarize",
@@ -51,5 +71,12 @@
     "electron-store": "^5.1.1",
     "electron-updater": "^4.3.1",
     "nucleus-nodejs": "^3.0.4"
+  },
+  "devDependencies": {
+    "ava": "^3.8.2",
+    "electron": "^8.3.0",
+    "electron-builder": "^22.6.1",
+    "electron-builder-notarize": "^1.1.2",
+    "electron-notarize": "^0.3.0"
   }
 }
