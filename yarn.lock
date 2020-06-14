@@ -538,7 +538,7 @@ chalk@^4.0.0:
     ansi-styles "^4.1.0"
     supports-color "^7.1.0"
 
-chokidar@^3.4.0:
+chokidar@^3.3.1, chokidar@^3.4.0:
   version "3.4.0"
   resolved "https://registry.yarnpkg.com/chokidar/-/chokidar-3.4.0.tgz#b30611423ce376357c765b9b8f904b9fba3c0be8"
   integrity sha512-aXAaho2VJtisB/1fg1+3nlLJqGOuewTzQpd/Tz0yTg2R0e4IGtshYvtjowyEumcBv2z+y4+kc75Mz7j5xJskcQ==
@@ -785,6 +785,13 @@ date-time@^2.1.0:
   dependencies:
     time-zone "^1.0.0"
 
+date-time@^3.1.0:
+  version "3.1.0"
+  resolved "https://registry.yarnpkg.com/date-time/-/date-time-3.1.0.tgz#0d1e934d170579f481ed8df1e2b8ff70ee845e1e"
+  integrity sha512-uqCUKXE5q1PNBXjPqvwhwJf9SwMoAHBgWJ6DcrnS5o+W2JOiIILl0JEdVD8SGujrNS02GGxgwAg2PN2zONgtjg==
+  dependencies:
+    time-zone "^1.0.0"
+
 debounce-fn@^3.0.1:
   version "3.0.1"
   resolved "https://registry.yarnpkg.com/debounce-fn/-/debounce-fn-3.0.1.tgz#034afe8b904d985d1ec1aa589cd15f388741d680"
@@ -937,6 +944,11 @@ electron-builder@^22.6.1:
     update-notifier "^4.1.0"
     yargs "^15.3.1"
 
+electron-is-dev@^1.1.0:
+  version "1.2.0"
+  resolved "https://registry.yarnpkg.com/electron-is-dev/-/electron-is-dev-1.2.0.tgz#2e5cea0a1b3ccf1c86f577cee77363ef55deb05e"
+  integrity sha512-R1oD5gMBPS7PVU8gJwH6CtT0e6VSoD0+SzSnYpNm+dBkcijgA+K7VAMHDfnRq/lkKPZArpzplTW6jfiMYosdzw==
+
 electron-notarize@^0.2.0:
   version "0.2.1"
   resolved "https://registry.yarnpkg.com/electron-notarize/-/electron-notarize-0.2.1.tgz#759e8006decae19134f82996ed910db26d9192cc"
@@ -966,6 +978,17 @@ electron-publish@22.6.1:
     fs-extra "^9.0.0"
     lazy-val "^1.0.4"
     mime "^2.4.5"
+
+electron-reloader@^1.0.1:
+  version "1.0.1"
+  resolved "https://registry.yarnpkg.com/electron-reloader/-/electron-reloader-1.0.1.tgz#15b193219b6583aedd2c95fa143d9bfc244bfdec"
+  integrity sha512-jVLK4SMvLRI8bWMTLtcyoRcmntTWcDrLUFt5QefgdcgQwN8uKi05SMJ8dW+9yD+PM1ESuyE//poBHVmucV4vUg==
+  dependencies:
+    chalk "^3.0.0"
+    chokidar "^3.3.1"
+    date-time "^3.1.0"
+    electron-is-dev "^1.1.0"
+    find-up "^4.1.0"
 
 electron-store@^5.1.1:
   version "5.1.1"

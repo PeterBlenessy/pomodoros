@@ -2,6 +2,10 @@
 const { app, BrowserWindow, Menu } = require('electron');
 const { autoUpdater } = require('electron-updater');
 
+try {
+	require('electron-reloader')(module);
+} catch (_) {}
+
 const { createTray } = require('./main/tray.js');
 const { analytics } = require('./main/analytics.js');
 const store = require('./main/settings.js');
