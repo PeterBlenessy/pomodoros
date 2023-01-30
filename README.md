@@ -1,6 +1,8 @@
 
 # Pomodoros
 
+> **Warning** Although the steps described below may be useful for educational purposes, be aware, that the code is not updated anymore, and package references may be outdated and contain security vulnerabilities.
+
 Yet another Pomodoro timer application for your Mac, Windows and Linux, based on Electron.
 
 ## Initial setup
